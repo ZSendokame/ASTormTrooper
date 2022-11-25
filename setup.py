@@ -4,7 +4,7 @@ long_description = open('./README.md')
 
 setup(
     name='ASTormtrooper',
-    version='1.0.1',
+    version='2.0.1',
     url='https://github.com/ZSendokame/ASTT',
     license='MIT license',
     author='ZSendokame',
