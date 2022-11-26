@@ -17,7 +17,7 @@ def main():
 
     for root, directory, files in os.walk(start):
         for file in files:
-            if file not in exclude and not file.endswith('pyc'):
+            if file not in exclude and file.endswith('py'):
                 file = open(f'{root}\{file}', 'r')
                 parsed = ast.parse(file.read())
 
