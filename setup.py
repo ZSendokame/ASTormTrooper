@@ -4,8 +4,8 @@ long_description = open('./README.md')
 
 setup(
     name='ASTormtrooper',
-    version='2.0.1',
-    url='https://github.com/ZSendokame/ASTT',
+    version='2.1.1',
+    url='https://github.com/ZSendokame/ASTormTrooper',
     license='MIT license',
     author='ZSendokame',
     description='Lint your code with lambdas.',
