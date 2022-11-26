@@ -18,7 +18,8 @@ You can call ASTT with:<br>
 
 ### Flags
 -c: Change configuration file.<br>
--e: Files to exclude (Example: `-e "excluded.py,otherfile.py"`)
+-e: Files to exclude. (Example: `-e "excluded.py,otherfile.py"`)<br>
+-a: Path to start the scan from. (Default: .)
 
 # Examples
 https://gist.github.com/ZSendokame/816c1d6ea9b78840254e70fd5e90d34a
