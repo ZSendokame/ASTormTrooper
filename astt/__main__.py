@@ -7,30 +7,24 @@ from . import func
 
 
 def main():
+    start = arguing.set('-a', default='.', help='Starting directory to scan.')
     config = arguing.set('-c', default='lint', help='Python file with rules.')
     exclude = arguing.set('-e', help='Files to exclude from linting.')
-
-    if not os.path.exists(config + '.py'):
-        exit(f'[-] {config} not found, please create one and configure it.')
-
     lint = __import__(config)
-    remove = exclude.split(',')
-    directory = [
-        file
-        for file in os.listdir()
-        if os.path.isfile(file)
-        and file not in remove
-        and file.endswith('.py')
-    ]
+    exclude = exclude.split(',')
 
-    for file in directory:
-        file = open(file, 'r')
-        parsed = ast.parse(file.read())
+    exclude.append(config)
 
-        for node in ast.walk(parsed):
-            func.check(node=node, config=lint, filename=file.name)
+    for root, directory, files in os.walk(start):
+        for file in files:
+            if file not in exclude and not file.endswith('pyc'):
+                file = open(f'{root}\{file}', 'r')
+                parsed = ast.parse(file.read())
 
-        file.close()
+                for node in ast.walk(parsed):
+                    func.check(node=node, config=lint, filename=file.name)
+
+                file.close()
 
 
 if __name__ == '__main__':
