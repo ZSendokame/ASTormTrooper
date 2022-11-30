@@ -2,6 +2,7 @@
 *ASTT* is a simple Linter, small and fast that reads dictionaries as configuration.<br>
 It accepts functions and lambdas as custom rules. Sometimes, filters don't need much code.
 <br><br>
+![stats](https://img.shields.io/pypi/dm/ASTormTrooper)
 
 # How to download
 ```py
