@@ -4,7 +4,7 @@ long_description = open('./README.md')
 
 setup(
     name='ASTormtrooper',
-    version='3.1.1',
+    version='3.1.2',
     url='https://github.com/ZSendokame/ASTormTrooper',
     license='MIT license',
     author='ZSendokame',
