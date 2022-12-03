@@ -22,5 +22,5 @@ You can call ASTT with:<br>
 -e: Files to exclude. (Example: `-e "excluded.py,otherfile.py"`)<br>
 -a: Path to start the scan from. (Default: .)
 
-# Examples
+# Base configuration
 https://gist.github.com/ZSendokame/816c1d6ea9b78840254e70fd5e90d34a
